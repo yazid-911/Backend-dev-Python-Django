@@ -16,6 +16,8 @@ class CandidateRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
 class RecruiterListCreate(generics.ListCreateAPIView):
     queryset = Recruiter.objects.all()
     serializer_class = RecruiterSerializer
+    queryset = Candidate.objects.all()
+    serializer_class = CandidateSerializer
     
 class RecruiterRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
     queryset = Recruiter.objects.all()
