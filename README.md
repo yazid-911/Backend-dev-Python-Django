@@ -11,10 +11,10 @@ Backend de la plateforme de recrutement, développé avec Django et Django REST 
 ## Installation  
 
 1. **Clonez le dépôt** :   
-   $git clone https://github.com/yazid-911/Backend-dev-Python-Django 
-   $cd recrutement_backend  
-2. **Créez un environnement virtuel** :
+$git clone https://github.com/yazid-911/Backend-dev-Python-Django 
+$cd recrutement_backend
 
+2. **Créez un environnement virtuel** :
 $python -m venv venv  
 $source venv/bin/activate  # Sur Unix/Mac  
 $venv\Scripts\activate     # Sur Windows  
@@ -26,11 +26,14 @@ $pip install django djangorestframework psycopg2
 Créez une base de données pour le projet.
 Mettez à jour les paramètres de la base de données dans settings.py.
 
-6. **Effectuer les migrations** :
+5. **Effectuer les migrations** :
 $python manage.py migrate  
 
-7. **Lancer le serveur de développement** :
-
+6. **Lancer le serveur de développement** :
 $python manage.py runserver
+
+7. **Accéder à l'API** :
+L'API sera disponible sur http://127.0.0.1:8000/api/.
+La documentation de l'API est générée avec Swagger et est accessible à http://127.0.0.1:8000/swagger/
 
 
