@@ -11,6 +11,7 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from .views import CandidateListForRecruiters
 
+# Génère une vue Swagger pour l'API
 schema_view = get_schema_view(
    openapi.Info(
       title="Snippets API",
@@ -27,13 +28,13 @@ schema_view = get_schema_view(
 
 
 urlpatterns = [
-    path('candidates/', CandidateListCreate.as_view(), name='candidate-list-create'),
-    path('candidates/<int:pk>/', CandidateRetrieveUpdateDestroy.as_view(), name='candidate-detail'),
+    path('candidates/', CandidateListCreate.as_view(), name='candidate-list-create'), # Permet de lister ou de créer des candidats.
+    path('candidates/<int:pk>/', CandidateRetrieveUpdateDestroy.as_view(), name='candidate-detail'), #  Permet de récupérer, mettre à jour ou supprimer un recruteur spécifique.
 
-    path('recruiters/', RecruiterListCreate.as_view(), name='recruiter-list-create'),
-    path('recruiters/<int:pk>/', RecruiterRetrieveUpdateDestroy.as_view(), name='recruiter-detail'),
-    path('swagger/schema/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
-    path('swagger/redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc-ui'),
-     path('recruiters/candidates/', CandidateListForRecruiters.as_view(), name='recruiters-candidates-list'),
+    path('recruiters/', RecruiterListCreate.as_view(), name='recruiter-list-create'), # Permet de lister ou de créer des recruteurs.
+    path('recruiters/<int:pk>/', RecruiterRetrieveUpdateDestroy.as_view(), name='recruiter-detail'), # Permet de récupérer, mettre à jour ou supprimer un recruteur spécifique.
+    path('swagger/schema/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'), #Affiche la documentation de l'API avec l'interface Swagger
+    path('swagger/redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc-ui'), #Affiche la documentation de l'API avec l'interface ReDoc.
+     path('recruiters/candidates/', CandidateListForRecruiters.as_view(), name='recruiters-candidates-list'), #Permet de récupérer, mettre à jour ou supprimer un recruteur spécifique.
 
 ]
