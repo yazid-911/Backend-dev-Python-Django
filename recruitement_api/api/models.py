@@ -1,5 +1,6 @@
 from django.db import models
 
+# Modèle représentant un candidat dans la base de données.
 class Candidate(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
@@ -8,6 +9,7 @@ class Candidate(models.Model):
     def __str__(self):
         return self.name
 
+# Modèle représentant un recruteur dans la base de données.
 class Recruiter(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
