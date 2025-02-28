@@ -34,6 +34,6 @@ $python manage.py runserver
 
 7. **Accéder à l'API** :
 L'API sera disponible sur http://127.0.0.1:8000/api/.
-La documentation de l'API est générée avec Swagger et est accessible à http://127.0.0.1:8000/swagger/
+La documentation de l'API est générée avec Swagger et est accessible à http://127.0.0.1:8000/swagger/schema et avec redoc à http://127.0.0.1:8000/swagger/redoc
 
 
